@@ -248,9 +248,6 @@
   .door-btn .t2{display:block;margin-top:7px;font-size:13px;font-weight:300;color:var(--gold-soft);letter-spacing:.05em}
   .meet-note{margin-top:12px;font-size:12.5px;color:#7a5a60;font-weight:300}
 
-  #fallback{display:none;text-align:center;margin-top:20px}
-  #fallback.show{display:block}
-  #fallback a{color:rgba(251,247,242,.72);font-size:13px;text-decoration:underline;text-underline-offset:3px}
   footer{text-align:center;margin-top:26px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(251,247,242,.45)}
   #petals{position:fixed;inset:0;pointer-events:none;z-index:50}
   @media (prefers-reduced-motion: reduce){
@@ -346,17 +343,12 @@
     </div>
   </section>
 
-  <div id="fallback">
-    <a id="fallbackLink" href="https://meet.google.com/gfe-ceci-awb" target="_blank" rel="noopener">In a hurry? Enter the meeting directly &rarr;</a>
-  </div>
-
   <footer>With love &middot; Wedding Reels India</footer>
 </div>
 
 <script>
   var MEET_LINK = "https://meet.google.com/gfe-ceci-awb";
   document.getElementById('meetBtn').href = MEET_LINK;
-  document.getElementById('fallbackLink').href = MEET_LINK;
 
   /* ---------- Countdown to 5 Dec 2026, 00:00 IST ---------- */
   var target = new Date('2026-12-05T00:00:00+05:30').getTime();
@@ -442,7 +434,6 @@
     progress = 1; render();
     scene.classList.add('arrived');
     document.getElementById('walkRow').style.display = 'none';
-    document.getElementById('fallback').classList.remove('show');
     burstPetals();
     var reveal = document.getElementById('reveal');
     reveal.classList.add('show');
@@ -450,11 +441,6 @@
       reveal.scrollIntoView({behavior:'smooth', block:'start'});
     }, 650);
   }
-
-  /* Fallback direct link after ~25s if the walk isn't finished */
-  setTimeout(function(){
-    if (!completed) document.getElementById('fallback').classList.add('show');
-  }, 25000);
 
   /* ---------- Petals celebration ---------- */
   var canvas = document.getElementById('petals');
