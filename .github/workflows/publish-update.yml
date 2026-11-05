@@ -1,6 +1,7 @@
 name: publish-update
 on: workflow_dispatch
-permissions: contents: write
+permissions:
+  contents: write
 jobs:
   publish:
     runs-on: ubuntu-latest
