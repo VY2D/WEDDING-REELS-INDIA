@@ -1,0 +1,15 @@
+name: publish-update
+on: workflow_dispatch
+permissions: contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cp wedding-reels-india-website.html index.html
+      - run: |
+          git config user.name "site-update"
+          git config user.email "site-update@example.com"
+          git add index.html
+          git commit -m "Update view counts (varmala reel 10M)" || echo "no changes"
+          git push
