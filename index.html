@@ -1615,8 +1615,8 @@
         <div class="loc-note">
           <p><strong>Your city not on the list?</strong> No problem — wherever the wedding is, we're there. We travel all over India, and to international destinations too; travel, stay and food are arranged by the client, and we handle everything else.</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn btn-dark" href="https://wa.me/919784855155?text=Hi%20Wedding%20Reels%20India!%20I%27d%20like%20to%20ask%20about%20my%20wedding%20venue." target="_blank" rel="noopener">Ask About Your Venue</a>
-            <a class="btn btn-wa" href="https://wa.me/919784855155?text=Hi!%20Meri%20wedding%20destination%20par%20hai%2C%20booking%20ke%20baare%20me%20jaanna%20hai." target="_blank" rel="noopener">Ask About Your Destination</a>
+            <a class="btn btn-dark" href="#choose-number" data-wa-pick data-msg="Hi Wedding Reels India! I'd like to ask about my wedding venue.">Ask About Your Venue</a>
+            <a class="btn btn-wa" href="#choose-number" data-wa-pick data-msg="Hi! Meri wedding destination par hai, booking ke baare me jaanna hai.">Ask About Your Destination</a>
           </div>
         </div>
       </div>
@@ -1933,6 +1933,24 @@
       </div>
     </div>
 
+    <!-- Quick WhatsApp number picker — opened by Ask About Your Venue / Destination -->
+    <div class="wa-chooser" id="waQuickPicker" hidden role="dialog" aria-modal="true" aria-labelledby="waQuickTitle">
+      <div class="wa-backdrop" data-qclose></div>
+      <div class="wa-sheet">
+        <button type="button" class="wa-close" data-qclose aria-label="Close number picker">×</button>
+        <h3 id="waQuickTitle">Chat on WhatsApp</h3>
+        <p class="wa-sub">Choose a number — WhatsApp will open with your message ready to send.</p>
+        <a class="wa-opt" id="waQuick1" href="https://wa.me/919784855155" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.03a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.12.82.83-3.04-.19-.31a8.08 8.08 0 0 1-1.24-4.28c0-4.47 3.64-8.1 8.15-8.1 4.47 0 8.1 3.63 8.1 8.1 0 4.5-3.63 8.12-8.1 8.12zm4.45-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.25-.63.79-.77.97-.14.18-.29.2-.53.08-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.35-1.69-.14-.24-.02-.38.11-.5.11-.11.24-.29.37-.43.12-.15.16-.25.24-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.84-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.37 1 2.53.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.44-.58 1.77-1.14.33-.56.33-1.04.23-1.14-.1-.1-.22-.16-.47-.28z"/></svg>
+          <span><span class="wa-num">+91 97848 55155</span><span class="wa-lab">WhatsApp — tap to chat</span></span>
+        </a>
+        <a class="wa-opt" id="waQuick2" href="https://wa.me/917236013481" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.03a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.12.82.83-3.04-.19-.31a8.08 8.08 0 0 1-1.24-4.28c0-4.47 3.64-8.1 8.15-8.1 4.47 0 8.1 3.63 8.1 8.1 0 4.5-3.63 8.12-8.1 8.12zm4.45-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.25-.63.79-.77.97-.14.18-.29.2-.53.08-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.35-1.69-.14-.24-.02-.38.11-.5.11-.11.24-.29.37-.43.12-.15.16-.25.24-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.84-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.37 1 2.53.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.44-.58 1.77-1.14.33-.56.33-1.04.23-1.14-.1-.1-.22-.16-.47-.28z"/></svg>
+          <span><span class="wa-num">+91 72360 13481</span><span class="wa-lab">WhatsApp — tap to chat</span></span>
+        </a>
+      </div>
+    </div>
+
     <!-- sticky mobile CTA -->
     <div class="sticky-cta">
       <a href="#book-now" data-book data-msg="Hi Wedding Reels India! I'd like to check if my wedding date is available.">
@@ -1941,6 +1959,50 @@
       </a>
     </div>
 
+    <script>
+      /* Ask About Your Venue / Destination -> quick number picker.
+         Neither button links straight to WhatsApp: clicking opens this
+         picker, and the chosen number opens WhatsApp carrying that
+         button's own prefilled message. Order: 97848 55155 first,
+         72360 13481 second. */
+      (function () {
+        var picker = document.getElementById("waQuickPicker");
+        if (!picker) return;
+        var q1 = document.getElementById("waQuick1");
+        var q2 = document.getElementById("waQuick2");
+        var QNUM1 = "919784855155";
+        var QNUM2 = "917236013481";
+        var qLastFocus = null;
+        function openQuick(msg, opener) {
+          var enc = encodeURIComponent(msg || "");
+          q1.href = "https://wa.me/" + QNUM1 + "?text=" + enc;
+          q2.href = "https://wa.me/" + QNUM2 + "?text=" + enc;
+          qLastFocus = opener || document.activeElement;
+          picker.hidden = false;
+          document.body.classList.add("wa-open");
+          if (q1) q1.focus();
+        }
+        function closeQuick() {
+          if (picker.hidden) return;
+          picker.hidden = true;
+          document.body.classList.remove("wa-open");
+          if (qLastFocus && qLastFocus.focus) qLastFocus.focus();
+        }
+        document.addEventListener("click", function (e) {
+          var trigger = e.target.closest("[data-wa-pick]");
+          if (trigger) {
+            e.preventDefault();
+            openQuick(trigger.getAttribute("data-msg") || "", trigger);
+            return;
+          }
+          if (e.target.closest("[data-qclose]")) { closeQuick(); return; }
+          if (e.target.closest("#waQuickPicker .wa-opt")) { closeQuick(); }
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeQuick();
+        });
+      })();
+    </script>
     <script>
       (function () {
         var WA = "https://wa.me/917236013481";
