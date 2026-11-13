@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vy2d.github.io/WEDDING-REELS-INDIA/sitemap.xml
+Sitemap: https://weddingreelsindia.com/sitemap.xml
